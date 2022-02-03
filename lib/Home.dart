@@ -68,8 +68,8 @@ class _HomeState extends State<Home> {
 
 
                     return ListTile(
-                      title: Text(post._title),
-                      subtitle: Text(post._body),
+                      title: Text(post.title),
+                      subtitle: Text(post.body),
                     );
                   }
               );

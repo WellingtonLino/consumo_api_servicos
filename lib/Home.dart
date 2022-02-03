@@ -11,9 +11,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String _urlBase = "https://jsonplaceholder.typicode.com/posts";
-  
- 
+  Uri _urlBase = Uri.parse("https://jsonplaceholder.typicode.com/posts");
+
+
+
   Future<List<Post>> _recuperarPost() async {
     
     http.Response response = await http.get(_urlBase);
@@ -68,8 +69,8 @@ class _HomeState extends State<Home> {
 
 
                     return ListTile(
-                      title: Text(post.title),
-                      subtitle: Text(post.body),
+                      title: Text(post._title),
+                      subtitle: Text(post._body),
                     );
                   }
               );
